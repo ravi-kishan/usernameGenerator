@@ -1,16 +1,35 @@
 {
   "name": "@ravik1/usernamegenerator",
-  "version": "1.0.1",
+  "version": "2.0.11",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "mocha -r ts-node/register src/**/*.test.ts --require esm"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+    "@types/events": "^3.0.0",
+    "@types/jquery": "^3.3.38",
+    "@types/lodash-es": "^4.17.3",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.14",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "esm": "^3.2.25",
     "events": "^3.1.0",
-    "lodash": "^4.17.15"
-  }
+    "jquery": "^3.5.1",
+    "lodash-es": "^4.17.15",
+    "mocha": "^8.0.1",
+    "ts-node": "^8.10.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
